@@ -9,11 +9,12 @@ from euler import * ;
 ###
 if __name__ == '__main__':
     products = [];
-    for a in range(1, 10000):
-        minimum = int(exp(log(1e3 * sqrt(10)) - log(a)));
-        maximum = int(exp(log(1e4) - log(a)));
-        for b in range(minimum, maximum):
-            if IsPandigital(a, b):
-                products.append(a * b);
+    for multiplicand in range(1, 10000):
+        minimum = int(exp(log(1e3 * sqrt(10)) - log(multiplicand)));
+        maximum = int(exp(log(1e4) - log(multiplicand)));
+        for multiplier in range(minimum, maximum):
+            digits = '%d%d%d' % (multiplicand, multiplier, multiplicand * multiplier);
+            if IsPandigital(digits):
+                products.append(multiplicand * multiplier);
     ###
     print(sum(set(products)));

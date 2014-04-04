@@ -277,8 +277,8 @@ def WaysToChange(target, index, coins):
     ###
     return sum(WaysToChange(target - coins[index] * jndex, index - 1, coins) for jndex in range(target // coins[index] + 1));
 ###
-def IsPandigital(multiplicand, multiplier):
-    return set(int(number) for number in '%d%d%d' % (multiplicand, multiplier, multiplicand * multiplier)) == panDigits;
+def IsPandigital(digits):
+    return len(digits) == 9 and set(int(digit) for digit in digits) == set(range(1, 10));
 ###
 def IsCuriousFraction(dividend, divisor):
     if divisor % 10:
@@ -323,4 +323,3 @@ def IsTruncatable(prime, primes):
 
 digit2Factorial = {digit : Factorial(digit) for digit in range(10)};
 order2Digits = {tens : sorted(digit for digit, factorial in digit2Factorial.items() if tens >= GetOrder(factorial)) for tens in range(10)};
-panDigits = set(range(1, 10));
