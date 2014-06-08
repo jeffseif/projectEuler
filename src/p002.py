@@ -4,23 +4,23 @@
 #   1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 # Find the sum of all the even-valued terms in the sequence which do not exceed four million.
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
-    past = 0;
-    present = 0;
-    future = 1;
-    total = 0;
-    limit = 4e6;
+    past = 0
+    present = 0
+    future = 1
+    total = 0
+    limit = 4e6
     ###
     while True:
-        past = present;
-        present = future;
-        future += past;
+        past = present
+        present = future
+        future += past
         ###
         if future > limit:
-            break;
+            break
         ###
         if not future % 2:
-            total += future;
-    print(total);
+            total += future
+    print(total)

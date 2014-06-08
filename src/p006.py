@@ -8,9 +8,9 @@
 #   3025 - 385 = 2640.
 # Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
-    top = 100;
+    top = 100
     ###
-    print(sum((index + 1) * (jndex + 1) for index in range(top) for jndex in range(top) if index != jndex));
+    print(sum((index + 1) * (jndex + 1) for index in range(top) for jndex in range(top) if index != jndex))

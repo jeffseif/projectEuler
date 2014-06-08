@@ -6,19 +6,19 @@
 # There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 # Find the product abc.
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
-    top = 1000;
+    top = 1000
     for a in range(top):
-        a2 = a ** 2;
+        a2 = a ** 2
         for b in range(top):
             if b <= a:
-                continue;
+                continue
             b2 = b ** 2
-            c = 1000 - a - b;
+            c = 1000 - a - b
             if c <= a or c <= b:
-                continue;
+                continue
             if c ** 2 == a2 + b2:
-                print(a * b * c);
-                break;
+                print(a * b * c)
+                break

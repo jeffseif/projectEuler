@@ -11,23 +11,23 @@
 #      e.g. |11| = 11 and |4| = 4
 # Find the product of the coefficients, a and b, for the quadratic expression that produces the maximum number of primes for consecutive values of n, starting with n = 0.
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
-    limit = 1000;
+    limit = 1000
     ###
-    maximum = (0, 0);
-    primesBelowLimit = PrimesBelow(limit);
-    primesBelowAboveLimit = PrimesBelow(limit ** 1.5);
+    maximum = (0, 0)
+    primesBelowLimit = PrimesBelow(limit)
+    primesBelowAboveLimit = PrimesBelow(limit ** 1.5)
     for b in primesBelowLimit:
         for number in primesBelowLimit:
-            a = number - b - 1;
-            count = 2;
+            a = number - b - 1
+            count = 2
             while True:
                 if number not in primesBelowAboveLimit:
-                    break;
-                number += 2 * count + a - 1;
-                count += 1;
-                maximum = max(maximum, (count, a * b));
+                    break
+                number += 2 * count + a - 1
+                count += 1
+                maximum = max(maximum, (count, a * b))
     ###
-    print(maximum[1]);
+    print(maximum[1])

@@ -5,13 +5,13 @@
 # As 12 is the smallest abundant number, 1 + 2 + 3 + 4 + 6 = 16, the smallest number that can be written as the sum of two abundant numbers is 24. By mathematical analysis, it can be shown that all integers greater than 28123 can be written as the sum of two abundant numbers. However, this upper limit cannot be reduced any further by analysis even though it is known that the greatest number that cannot be expressed as the sum of two abundant numbers is less than this limit.
 # Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
-    top = 28123;
+    top = 28123
     ###
-    abundantNumbers = [number + 1 for number in range(top) if IsAbundant(number + 1)];
-    twoSums = list(set(abundantNumbers[index] + abundantNumbers[jndex] for index in range(len(abundantNumbers)) for jndex in range(index, len(abundantNumbers))));
-    nonTwoSums = [number + 1 for number in range(top) if number + 1 not in twoSums];
+    abundantNumbers = [number + 1 for number in range(top) if IsAbundant(number + 1)]
+    twoSums = list(set(abundantNumbers[index] + abundantNumbers[jndex] for index in range(len(abundantNumbers)) for jndex in range(index, len(abundantNumbers))))
+    nonTwoSums = [number + 1 for number in range(top) if number + 1 not in twoSums]
     ###
-    print(sum(nonTwoSums));
+    print(sum(nonTwoSums))

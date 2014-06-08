@@ -13,11 +13,11 @@
 # Where 0.1(6) means 0.166666..., and has a 1-digit recurring cycle. It can be seen that 1/7 has a 6-digit recurring cycle.
 # Find the value of d  1000 for which 1/d contains the longest recurring cycle in its decimal fraction part.
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
-    maximum = (0, 0);
+    maximum = (0, 0)
     for integer in range(1, 1000):
-        maximum = max(maximum, (len(LongDivision(integer)), integer));
+        maximum = max(maximum, (len(LongDivision(integer)), integer))
     ###
-    print(maximum[1]);
+    print(maximum[1])

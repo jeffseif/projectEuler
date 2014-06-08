@@ -9,18 +9,18 @@
 # Which starting number, under one million, produces the longest chain?
 # NOTE: Once the chain starts the terms are allowed to go above one million.
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
-    top = 1000000;
+    top = 1000000
     ###
-    number2Count = {1 : 1};
+    number2Count = {1 : 1}
     for start in range(2, top):
-        number = start;
-        count = 1;
+        number = start
+        count = 1
         while number >= start:
-            number = P14Next(number);
-            count += 1;
-        number2Count[start] = count + number2Count[number] - 1;
+            number = P14Next(number)
+            count += 1
+        number2Count[start] = count + number2Count[number] - 1
     ###
-    print(max(number2Count, key = lambda a: number2Count.get(a)));
+    print(max(number2Count, key = lambda a: number2Count.get(a)))

@@ -9,16 +9,16 @@
 # It can be verified that the sum of the numbers on the diagonals is 101.
 # What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral formed in the same way?
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
-    side = 1001;
+    side = 1001
     ###
-    rows = side / 2;
-    total = 1;
-    corner = 1;
+    rows = side / 2
+    total = 1
+    corner = 1
     for row in range(rows):
-        total += 4 * corner + 10 * 2 * (row + 1);
-        corner += 8 * (row + 1);
+        total += 4 * corner + 10 * 2 * (row + 1)
+        corner += 8 * (row + 1)
     ###
-    print(total);
+    print(total)

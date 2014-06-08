@@ -4,10 +4,10 @@
 # Find the sum of the only eleven primes that are both truncatable from left to right and right to left.
 # NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes.
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
-    primes = PrimesBelow(8e5);
+    primes = PrimesBelow(8e5)
     ###
     # Remove terminal 1's and 9's
     # Remove beginning 1's and 9's
@@ -15,12 +15,12 @@ if __name__ == '__main__':
     maybeTruncatable = [prime for prime in primes if prime % 10 not in (1, 9)]
     maybeTruncatable = [prime for prime in maybeTruncatable if str(prime)[0] not in ('1', '9')]
     ###
-    truncatables = [];
+    truncatables = []
     for prime in maybeTruncatable:
         if IsTruncatable(prime, primes):
-            truncatables.append(prime);
+            truncatables.append(prime)
         ###
         if len(truncatables) > 11 + 3:
-            break;
+            break
     ###
-    print(sum(prime for prime in truncatables if prime > 9));
+    print(sum(prime for prime in truncatables if prime > 9))

@@ -5,16 +5,16 @@
 # For example, the proper divisors of 220 are 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 and 110; therefore d(220) = 284. The proper divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 220.
 # Evaluate the sum of all the amicable numbers under 10000.
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
-    top = 10000;
+    top = 10000
     ###
-    amicableNumbers = set();
+    amicableNumbers = set()
     for number in range(1, top):
-        sumDivisors = ProperDivisorsSum(number);
+        sumDivisors = ProperDivisorsSum(number)
         if sumDivisors != number and ProperDivisorsSum(sumDivisors) == number:
-            amicableNumbers.add(number);
-            amicableNumbers.add(sumDivisors);
+            amicableNumbers.add(number)
+            amicableNumbers.add(sumDivisors)
     ###
-    print(sum(amicableNumbers));
+    print(sum(amicableNumbers))

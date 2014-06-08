@@ -7,9 +7,9 @@
 #   1£1 + 150p + 220p + 15p + 12p + 31p
 # How many different ways can £2 be made using any number of coins?
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
-    coins = (1, 2, 5, 10, 20, 50, 100, 200);
+    coins = (1, 2, 5, 10, 20, 50, 100, 200)
     ###
-    print(WaysToChange(max(coins), len(coins) - 1, coins));
+    print(WaysToChange(max(coins), len(coins) - 1, coins))

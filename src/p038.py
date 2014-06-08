@@ -8,11 +8,11 @@
 # The same can be achieved by starting with 9 and multiplying by 1, 2, 3, 4, and 5, giving the pandigital, 918273645, which is the concatenated product of 9 and (1,2,3,4,5).
 # What is the largest 1 to 9 pandigital 9-digit number that can be formed as the concatenated product of an integer with (1,2, ... , n) where n > 1?
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
     for number in range(9387, 9234, -1):
-        digits = str(number) + str(number * 2);
+        digits = str(number) + str(number * 2)
         if IsPandigital(digits):
-            print(digits);
-            break;
+            print(digits)
+            break

@@ -18,20 +18,20 @@
 # The 12th term, F12, is the first term to contain three digits.
 # What is the first term in the Fibonacci sequence to contain 1000 digits?
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
-    digits = 1e3;
+    digits = 1e3
     ###
-    present = 0;
-    future = 1;
+    present = 0
+    future = 1
     ###
-    big = Power(10, digits - 1);
-    count = 1;
+    big = Power(10, digits - 1)
+    count = 1
     while future < big:
-        past = present;
-        present = future;
-        future += past;
-        count += 1;
+        past = present
+        present = future
+        future += past
+        count += 1
     ###
-    print(count);
+    print(count)

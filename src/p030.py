@@ -8,15 +8,15 @@
 # The sum of these numbers is 1634 + 8208 + 9474 = 19316.
 # Find the sum of all the numbers that can be written as the sum of fifth powers of their digits.
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
-    exponent = 5;
+    exponent = 5
     ###
-    digit2Power = dict((str(digit), Power(digit, exponent)) for digit in range(10));
-    matches = [];
+    digit2Power = dict((str(digit), Power(digit, exponent)) for digit in range(10))
+    matches = []
     for number in range(2, 200000):
         if SumPowerOfDigits(number, digit2Power) == number:
-            matches.append(number);
+            matches.append(number)
     ###
-    print(sum(matches));
+    print(sum(matches))

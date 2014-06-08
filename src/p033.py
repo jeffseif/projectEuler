@@ -5,25 +5,25 @@
 # There are exactly four non-trivial examples of this type of fraction, less than one in value, and containing two digits in the numerator and denominator.
 # If the product of these four fractions is given in its lowest common terms, find the value of the denominator.
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
-    fractions = [];
+    fractions = []
     ###
     for dividend in range(int(1e1), int(1e2)):
         for divisor in range(int(dividend + 1), int(1e2)):
             if IsCuriousFraction(dividend, divisor):
-                fractions.append((dividend, divisor));
+                fractions.append((dividend, divisor))
     ###
-    numerator, denominator = 1, 1;
+    numerator, denominator = 1, 1
     for (dividend, divisor) in fractions:
-        numerator *= dividend;
-        denominator *= divisor;
+        numerator *= dividend
+        denominator *= divisor
     ###
-    bothPrimeFactors = list(set(PrimeFactors(numerator)) & set(PrimeFactors(denominator)));
+    bothPrimeFactors = list(set(PrimeFactors(numerator)) & set(PrimeFactors(denominator)))
     while bothPrimeFactors:
-        numerator //= bothPrimeFactors[0];
-        denominator //= bothPrimeFactors[0];
-        bothPrimeFactors = list(set(PrimeFactors(numerator)) & set(PrimeFactors(denominator)));
+        numerator //= bothPrimeFactors[0]
+        denominator //= bothPrimeFactors[0]
+        bothPrimeFactors = list(set(PrimeFactors(numerator)) & set(PrimeFactors(denominator)))
     ###
-    print(denominator);
+    print(denominator)

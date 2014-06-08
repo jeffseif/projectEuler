@@ -24,7 +24,7 @@
 # The product of these numbers is 26  63  78  14 = 1788696.
 # What is the greatest product of four adjacent numbers in any direction (up, down, left, right, or diagonally) in the 2020 grid?
 ###
-from euler import * ;
+from euler import *
 ###
 if __name__ == '__main__':
     raw = '''08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
@@ -46,27 +46,27 @@ if __name__ == '__main__':
              04 42 16 73 38 25 39 11 24 94 72 18 08 46 29 32 40 62 76 36
              20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16
              20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
-             01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48''';
+             01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48'''
     ###
-    matrix = Raw2Matrix(raw);
-    product = 0;
+    matrix = Raw2Matrix(raw)
+    product = 0
     ###
-    L = 4;
-    N = len(matrix);
+    L = 4
+    N = len(matrix)
     for index in range(N):
         for jndex in range(N):
-            rite = 0;
-            diag = 0;
+            rite = 0
+            diag = 0
             if jndex < N - (L - 1):
-                rite = Product([matrix[index][jndex + kndex] for kndex in range(L)]);
+                rite = Product([matrix[index][jndex + kndex] for kndex in range(L)])
                 if index < N - (L - 1):
-                    diag = Product([matrix[index + kndex][jndex + kndex] for kndex in range(L)]);
-            down = 0;
-            diah = 0;
+                    diag = Product([matrix[index + kndex][jndex + kndex] for kndex in range(L)])
+            down = 0
+            diah = 0
             if index < N - (L - 1):
-                down = Product([matrix[index + kndex][jndex] for kndex in range(L)]);
+                down = Product([matrix[index + kndex][jndex] for kndex in range(L)])
                 if jndex >= (L - 1):
-                    diah = Product([matrix[index + kndex][jndex - kndex] for kndex in range(L)]);
-            product = max(product, rite, diag, down, diah);
+                    diah = Product([matrix[index + kndex][jndex - kndex] for kndex in range(L)])
+            product = max(product, rite, diag, down, diah)
     ###
-    print(product);
+    print(product)
