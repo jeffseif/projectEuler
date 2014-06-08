@@ -16,7 +16,6 @@
 from euler import * ;
 ###
 if __name__ == '__main__':
-    from math import floor;
     numberDivisors = 500;
     ###
     number = 1;
