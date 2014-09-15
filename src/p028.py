@@ -14,7 +14,7 @@ from euler import *
 if __name__ == '__main__':
     side = 1001
 
-    rows = side / 2
+    rows = side // 2
     total = 1
     corner = 1
     for row in range(rows):
