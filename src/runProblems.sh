@@ -2,7 +2,7 @@
 
 # Constants
 
-SOLUTIONFILE='solutions.md5' ;
+SOLUTIONFILE='../dat/solutions.md5' ;
 OK='\033[1;32mOK\033[0m' ;
 FAIL='\033[1;31mFAIL\033[0m' ;
 
