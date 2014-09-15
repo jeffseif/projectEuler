@@ -1,5 +1,5 @@
 #! /usr/bin/python3
-###
+
 # The following iterative sequence is defined for the set of positive integers:
 #   n  n/2 (n is even)
 #   n  3n + 1 (n is odd)
@@ -8,12 +8,12 @@
 # It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms. Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1.
 # Which starting number, under one million, produces the longest chain?
 # NOTE: Once the chain starts the terms are allowed to go above one million.
-###
+
 from euler import *
-###
+
 if __name__ == '__main__':
     top = 1000000
-    ###
+
     number2Count = {1 : 1}
     for start in range(2, top):
         number = start
@@ -22,5 +22,5 @@ if __name__ == '__main__':
             number = P14Next(number)
             count += 1
         number2Count[start] = count + number2Count[number] - 1
-    ###
+
     print(max(number2Count, key = lambda a: number2Count.get(a)))
